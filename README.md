@@ -3,9 +3,10 @@
 > Analyzing short-term rental trends, pricing strategies, and market insights to optimize Airbnb listings.
 
 ## Table of Contents
-* [Overview](#overview)
-* [Research Questions](#Research Questions)
-* [Screenshots](#screenshots)
+* [Overview](#Overview)
+* [Research Questions](#research-Questions)
+* [Dataset](#Dataset)
+* [Recommendation for Airbnb Hosts](#recommendations)
 * [Technologies Used](#technologies-used)
 * [Setup Instructions](#setup-instructions)
 * [How It Works](#how-it-works)
@@ -38,30 +39,13 @@ The dataset was obtained from **Kaggle** and includes:
 - **Availability (days per year)**
 - **Total listings per host**
 
-## Data Preprocessing
+### Data Preprocessing
 - Removed **irrelevant columns**: ID, Listing Name, Host ID, Host Name
 - Dropped **missing values** from columns: Last Review, Neighbourhood Groups, Reviews Per Month
 - Removed **outliers** in 'Price' using percentile-based filtering
 
-## Data Visualization
-- **Average price across each city**
-- **Number of listings per city**
-- **Room type distribution**
-- **Distribution of listings across cities**
-
-## Price Prediction Using Multiple Linear Regression
+### Price Prediction Using Multiple Linear Regression
 Objective: Help hosts optimize pricing strategies.
-
-**Key Findings:**
-- Higher **availability (365 days/year)** slightly increases price
-- More **minimum nights** leads to lower pricing
-- **Higher review count** correlates with lower price (potentially due to competitive pricing strategies)
-- **Private rooms** are priced **$98.92 lower** on average than entire homes/apartments
-
-Despite a small **RMSE increase** (137.07 to 140.14), simplifying the model improved interpretability and practicality for real-world pricing strategies.
-
-## Classification Trees
-Objective: Identify optimal room type selection for pricing strategies.
 
 **Insights:**
 - **Private rooms** dominate when pricing is **under $65.5**
@@ -69,7 +53,7 @@ Objective: Identify optimal room type selection for pricing strategies.
 - **Entire homes/apartments** become dominant as prices increase beyond **$85.5**
 - If a stay exceeds **65 nights**, entire homes are preferred in **New York**
 
-## Clustering Analysis
+### Clustering Analysis
 Using clustering techniques, Airbnb listings were grouped into **four major clusters**:
 
 1. **Highly Reviewed Dwellings** - Low price, high availability, and high reviews (e.g., Seattle, Portland, Nashville)
@@ -119,10 +103,6 @@ model.fit(X_train, y_train)
 - **Optimal Room Type Classification**
 - **Clustering Analysis for Segmentation**
 
-### Future Enhancements
-- Add **time-series analysis** for seasonal price trends
-- Improve predictive accuracy using **advanced ML models**
-- Deploy an **interactive dashboard** for real-time insights
 
 ## Status
 ✅ **Completed** – Open to further refinements and feedback.
@@ -131,7 +111,7 @@ model.fit(X_train, y_train)
 - Handling **large datasets** with missing values
 - Ensuring **price predictions are interpretable**
 - Managing **imbalanced data** for classification models
-
+  
 ## Learnings
 - **Improved ML model selection** for pricing predictions
 - **Understanding Airbnb market dynamics** across cities
@@ -139,7 +119,6 @@ model.fit(X_train, y_train)
 
 ## Contributors
 - **Vinmathi Iyappan** - Data Analysis & Machine Learning
-
 
 ## Contact 
 🔗 **LinkedIn:** [YourLinkedInProfile]([https://www.linkedin.com/in/vinmathi-iyappan/])  
